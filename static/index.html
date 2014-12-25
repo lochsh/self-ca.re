@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>selfcare</title>
+    <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
+  <div class="menu", id=button></div>
+  <script type="text/javascript">
+    var div = document.getElementById("button");
+    div.textContent = $.get("/selfcare");
+    var text = div.textContent;
+    console.log(text);
+    var t = $.get("/selfcare")
+    for (var key in t) {
+	console.log(t[key]);
+    }
+  </script>
+</html>
