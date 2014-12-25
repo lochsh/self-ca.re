@@ -8,12 +8,12 @@
   <div class="menu", id=button></div>
   <script type="text/javascript">
     var div = document.getElementById("button");
-    div.textContent = $.get("/selfcare");
-    var text = div.textContent;
-    console.log(text);
-    var t = $.get("/selfcare")
-    for (var key in t) {
-	console.log(t[key]);
-    }
+    var text = ""
+    $.get("/selfcare", {
+	}, function(data) {
+		console.log('data is ' + data);
+		text = data;
+		div.textContent = text;
+	});
   </script>
 </html>
