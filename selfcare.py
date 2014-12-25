@@ -38,7 +38,7 @@ def selfcare():
     nouns = read_lines('nouns.txt')
 
     #;o
-    message = 'You are a' + adj[a] + ' ' + nouns[n]
+    message = '<br>You are<br> a' + adj[a] + '<br>' + nouns[n] +  ' ;o'
     return message
 
 def main():
