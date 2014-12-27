@@ -22,7 +22,7 @@ def read_lines(fname):
     return words
 
 """
-Make and print inspirational message ;o
+Make inspirational message ;o
 """
 def selfcare():
     #Count how many adjectives and nouns
@@ -37,7 +37,7 @@ def selfcare():
     adj = read_lines('adjectives.txt')
     nouns = read_lines('nouns.txt')
 
-    #;o
+    #;o  quick and dirty line breaks as I haven't got vertical alignment to work in CSS yet :'(
     if len(adj[a]) < 7:
         message = '<br> <br> <br> <br>You are a' + adj[a] + '<br> <br>'  + nouns[n]
     elif len(adj[a] + nouns[n]) < 12:
