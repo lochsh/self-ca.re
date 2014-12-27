@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+    
   <head>
     <title>Self Care</title>
     <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </head>
+
   <div class="menu", id=circle></div>
   <script type="text/javascript">
     var div = document.getElementById("circle");
@@ -15,8 +17,9 @@
 		text = data;
 		div.innerHTML = text;
         });
-
+    
     var div = document.getElementById("circle");
+    /* inital circle background colours */
     var old_col = ['#33CCCC','#FFFFFF']
     $("div").click(function() {
       var text = "";
@@ -25,8 +28,9 @@
                 console.log('data is ' + data);
                 text = data;
                 div.innerHTML = text;
-        });
-        	
+                });
+
+       /*colours to use for circle background*/    	
        var col_pairs = [['#3366FF', '#00FF99'],
 			['#99CCFF', '#9999FF'],
 		  	['#FF9966', '#FFFF99'],
@@ -40,24 +44,23 @@
             ['#FF6666', '#6699FF'],
             ['#33CCCC', '#FFFFFF'],
             ['#FFFF99', '#33CCCC']];
-	
+
+        /* randomly pick a pair of colours */
 	    var new_col = col_pairs[Math.floor(Math.random()*col_pairs.length)];
-        
-        console.log('before while ' + old_col)
+
+        /* make sure the same colour pair never happens twice in a row */
         while (new_col[0] == old_col[0]) {
 		    new_col = col_pairs[Math.floor(Math.random()*col_pairs.length)];
-		    console.log('in while loop' + new_col)
-	    }
+        }
+
+        /* update previous colour */
 	    old_col = new_col;
-        console.log('after while ' + old_col)    
-        console.log(new_col)
 
 	    $("#circle").css({"background"
 		    :"radial-gradient(" + new_col[0] + "," + new_col[1] + ")"
 	    });
     });
 </script>
-
 
 <div id="header">
         <div id="header-content">
