@@ -38,7 +38,12 @@ def selfcare():
     nouns = read_lines('nouns.txt')
 
     #;o
-    message = '<br>You are<br> a' + adj[a] + '<br>' + nouns[n] +  ' ;o'
+    if len(adj[a]) < 7:
+        message = '<br> <br> <br> <br>You are a' + adj[a] + '<br> <br>'  + nouns[n]
+    elif len(adj[a] + nouns[n]) < 12:
+        message = '<br> <br> <br> <br>You are<br> <br>a' + adj[a] + ' '  + nouns[n]
+    else:
+        message = '<br> <br> <br>You are<br> <br>a' + adj[a] + '<br> <br>' + nouns[n]
     return message
 
 def main():

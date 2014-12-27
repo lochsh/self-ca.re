@@ -14,16 +14,53 @@
 		console.log('data is ' + data);
 		text = data;
 		div.innerHTML = text;
-	});
-    $("#circle").click(function() {
-      var div = document.getElementById("circle");
-      var text = ""
+        });
+
+    var div = document.getElementById("circle");
+    var old_col = ['#33CCCC','#FFFFFF']
+    $("div").click(function() {
+      var text = "";
       $.get("/selfcare", {
         }, function(data) {
                 console.log('data is ' + data);
                 text = data;
                 div.innerHTML = text;
         });
+        	
+       var col_pairs = [['#3366FF', '#00FF99'],
+			['#99CCFF', '#9999FF'],
+		  	['#FF9966', '#FFFF99'],
+			['#FF99FF', '#FFFF00'],
+			['#66FF99', '#33CCCC'],
+			['#CC99FF', '#FF6600'],
+			['#00CC99', '#FFFF66'],
+            ['#66CCFF', '#FF6699'],
+            ['#FFCCFF', '#CC66FF'],
+            ['#FF6600', '#FFCC99'],
+            ['#FF6666', '#6699FF'],
+            ['#CCFF66', '#00FFFF'],
+            ['#33CCCC', '#FFFFFF']];
+	
+	    var new_col = col_pairs[Math.floor(Math.random()*col_pairs.length)];
+        
+        console.log('before while ' + old_col)
+        while (new_col[0] == old_col[0]) {
+		    new_col = col_pairs[Math.floor(Math.random()*col_pairs.length)];
+		    console.log('in while loop' + new_col)
+	    }
+	    old_col = new_col;
+        console.log('after while ' + old_col)    
+        console.log(new_col)
+
+	    $("div").css({"background"
+		    :"radial-gradient(" + new_col[0] + "," + new_col[1] + ")"
+	    });
     });
-  </script>
+</script>
+<div class=square, id=box>
+ <footer, style=position:fixed;bottom:0;left:1>
+   <p, style="color:#33CCCC">Created by: Hannah McLaughlin</p>
+   <p><a href="http://mcla.ug", style="color: #9966FF">mcla.ug</a></p>
+   </footer> 
+</div>
 </html>
