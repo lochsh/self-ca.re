@@ -36,7 +36,7 @@
 		  	['#FF9966', '#FFFF99'],
 			['#FF99FF', '#FFFF00'],
 			['#66FF99', '#33CCCC'],
-			['#CC99FF', '#FF6600'],
+			['#CC99FF', '#FF9966'],
 			['#00CC99', '#FFFF66'],
             ['#66CCFF', '#FF6699'],
             ['#FFCCFF', '#CC66FF'],
@@ -52,7 +52,7 @@
         while (new_col[0] == old_col[0]) {
 		    new_col = col_pairs[Math.floor(Math.random()*col_pairs.length)];
         }
-
+        console.log(new_col)
         /* update previous colour */
 	    old_col = new_col;
 
