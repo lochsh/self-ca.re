@@ -24,27 +24,39 @@ margin-left: auto;
 margin-right: auto;
 white-space: pre;
 line-height: 0.9;
-top: 15%;
+top: 20%;
 left: 0;
 right: 0;
 background: radial-gradient(#33CCCC,#FFFFFF)}.menu:hover{box-shadow: 0px 0px 10px 10px #99CCFF; cursor:pointer;}
 
-.span{
-display:inline-block;
-vertical-align: middle;
-line-height:100px;
+#header {
+background-color: #0066CC;
+/*Opacity start*/
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+filter: alpha(opacity=50);
+-moz-opacity: 0.50;
+-khtml-opacity: 0.5;
+opacity: 0.5;
+/*Opacity end*/
+color: white;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px;
+padding: 0;
+margin: 0;
+}
+#header #header-content {
+margin: 10px;
 }
 
-.square {
-padding: 10px;
-width: 150px;
-height: 150px;
-margin-right:50px;
-margin-bottom: 30px;
-display: inline-block;
-vertical-align: top;
-cursor: pointer;
-position: relative;
+.alignleft {
+float: left;
+}
+
+.alignright {
+float: right;
 }
 
 .page           { margin: 2em auto; width: 35em; border: 5px solid #ccc;

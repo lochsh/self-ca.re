@@ -38,8 +38,8 @@
             ['#FFCCFF', '#CC66FF'],
             ['#FF6600', '#FFCC99'],
             ['#FF6666', '#6699FF'],
-            ['#CCFF66', '#00FFFF'],
-            ['#33CCCC', '#FFFFFF']];
+            ['#33CCCC', '#FFFFFF'],
+            ['#FFFF99', '#33CCCC']];
 	
 	    var new_col = col_pairs[Math.floor(Math.random()*col_pairs.length)];
         
@@ -52,15 +52,18 @@
         console.log('after while ' + old_col)    
         console.log(new_col)
 
-	    $("div").css({"background"
+	    $("#circle").css({"background"
 		    :"radial-gradient(" + new_col[0] + "," + new_col[1] + ")"
 	    });
     });
 </script>
-<div class=square, id=box>
- <footer, style=position:fixed;bottom:0;left:1>
-   <p, style="color:#33CCCC">Created by: Hannah McLaughlin</p>
-   <p><a href="http://mcla.ug", style="color: #9966FF">mcla.ug</a></p>
-   </footer> 
+
+
+<div id="header">
+        <div id="header-content">
+                    <h1>Self Care</h1>
+                    <p class="alignleft">Click the circle for compliments ;o</p>
+                    <p class="alignright"><font size = 2>by Hannah McLaughlin</font> </p>
+        </div>
 </div>
 </html>
