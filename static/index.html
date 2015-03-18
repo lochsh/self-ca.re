@@ -6,9 +6,12 @@
     <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </head>
+  <!--the big circle in middle -->
   <div class="menu" id="circle">
       <div id="message_field"></div>
   </div>
+
+  <!--Javascript for getting text in circle and changing colour-->
   <script type="text/javascript">
     var div = document.getElementById("message_field");
     var text = ""
@@ -17,9 +20,9 @@
 		console.log('data is ' + data);
 		text = data;
 		div.innerHTML = text;
+        console.log('first') 
         });
-    
-    var div = document.getElementById("message_field");
+    //var div = document.getElementById("message_field");
     /* initial circle background colours */
     var old_col = ['#33CCCC','#FFFFFF']
     $("div").click(function() {
@@ -29,8 +32,9 @@
                 console.log('data is ' + data);
                 text = data;
                 div.innerHTML = text;
+                console.log('second')
                 });
-
+       
        /*colours to use for circle background*/    	
        var col_pairs = [['#3366FF', '#00FF99'],
 			['#99CCFF', '#9999FF'],
