@@ -15,20 +15,20 @@
   <!--Javascript for getting text in circle and changing colour-->
   <script type="text/javascript">
     //initialise text in circle
-    var div = document.getElementById("message_field");
+    var mfield = document.getElementById("message_field");
     var text = ""
     $.get("/selfcare", {}, function(data) 
     {
 	    console.log('data is ' + data);
 	    text = data;
-	    div.innerHTML = text;
+	    mfield.innerHTML = text;
     });
 
     /* initial circle background colours */
     var old_col = ['#33CCCC','#FFFFFF']
 
     // get new message on each click
-    $("div").click(function() 
+    $("#circle").click(function() 
         {
         console.log('click');
         var text = "";
@@ -36,13 +36,11 @@
         {
             console.log('data is ' + data);
             text = data;
-            div.innerHTML = text;
+            mfield.innerHTML = text;
         });
     //});
 
     // change circle colours each click
-    var circ = document.getElementById("circle");
-   // $("circ").click(function() 
    // {
         /*colours to use for circle background*/    	
         var col_pairs = [['#3366FF', '#00FF99'],
