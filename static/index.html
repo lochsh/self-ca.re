@@ -5,6 +5,7 @@
     <title>Self Care</title>
     <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <meta charset="UTF-8"> 
   </head>
   <!--the big circle in middle -->
   <div class="menu" id="circle">
@@ -13,30 +14,38 @@
 
   <!--Javascript for getting text in circle and changing colour-->
   <script type="text/javascript">
+    //initialise text in circle
     var div = document.getElementById("message_field");
     var text = ""
-    $.get("/selfcare", {
-	}, function(data) {
-		console.log('data is ' + data);
-		text = data;
-		div.innerHTML = text;
-        console.log('first') 
-        });
-    //var div = document.getElementById("message_field");
+    $.get("/selfcare", {}, function(data) 
+    {
+	    console.log('data is ' + data);
+	    text = data;
+	    div.innerHTML = text;
+    });
+
     /* initial circle background colours */
     var old_col = ['#33CCCC','#FFFFFF']
-    $("div").click(function() {
-      var text = "";
-      $.get("/selfcare", {
-        }, function(data) {
-                console.log('data is ' + data);
-                text = data;
-                div.innerHTML = text;
-                console.log('second')
-                });
-       
-       /*colours to use for circle background*/    	
-       var col_pairs = [['#3366FF', '#00FF99'],
+
+    // get new message on each click
+    $("div").click(function() 
+        {
+        console.log('click');
+        var text = "";
+        $.get("/selfcare", {}, function(data) 
+        {
+            console.log('data is ' + data);
+            text = data;
+            div.innerHTML = text;
+        });
+    //});
+
+    // change circle colours each click
+    var circ = document.getElementById("circle");
+   // $("circ").click(function() 
+   // {
+        /*colours to use for circle background*/    	
+        var col_pairs = [['#3366FF', '#00FF99'],
 			['#99CCFF', '#9999FF'],
 		  	['#FF9966', '#FFFF99'],
 			['#FF99FF', '#FFFF00'],
@@ -55,7 +64,8 @@
 	    var new_col = col_pairs[Math.floor(Math.random()*col_pairs.length)];
 
         /* make sure the same colour pair never happens twice in a row */
-        while (new_col[0] == old_col[0]) {
+        while (new_col[0] == old_col[0]) 
+        {
 		    new_col = col_pairs[Math.floor(Math.random()*col_pairs.length)];
         }
         console.log(new_col)
