@@ -38,12 +38,7 @@ def selfcare():
     nouns = read_lines('nouns.txt')
 
     #;o  quick and dirty line breaks as I haven't got vertical alignment to work in CSS yet :'(
-    if len(adj[a]) < 7:
-        message = '<br> <br> <br> <br>You are a' + adj[a] + '<br> <br>'  + nouns[n]
-    elif len(adj[a] + nouns[n]) < 12:
-        message = '<br> <br> <br> <br>You are<br> <br>a' + adj[a] + ' '  + nouns[n]
-    else:
-        message = '<br> <br> <br>You are<br> <br>a' + adj[a] + '<br> <br>' + nouns[n]
+    message = 'You are a' + adj[a] + ' ' + nouns[n]
     return message
 
 def main():

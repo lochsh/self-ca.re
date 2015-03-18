@@ -1,10 +1,10 @@
 body{
-    font-family: AppleGothic;
+    font-family: AppleGothic, "Century Gothic", Muli, "Avant Garde", sans-serif;
 	background-image: url("background.jpg");
 	background-colour: #66CCFF;}
 
 h1, h2 {
-    font-family: AppleGothic; margin: 0;} 
+    font-family: AppleGothic, "Century Gothic", Muli,"Avant Garde", sans-serif; margin: 0;} 
 h1{
     border-bottom: 2px solid #eee; }
 h2{
@@ -12,30 +12,71 @@ h2{
 
 html		{height: 100%;}
 
+/* unvisited link */
+a:link {
+    color: #FFFFFF;
+}
+
+/* visited link */
+a:visited {
+    color: #FFFFFF;
+}
+
+/* mouse over link */
+a:hover {
+    color: #00FF00;
+}
+
+/* selected link */
+a:active {
+    color: #00FF00;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration:none
+}
+
 .menu{
-    display:table-cell;
-    vertical-align:middle;
+    display:block;
     width:400px;
     height:400px;
     border: 8px solid #FFFFFF;
     border-radius:50%;
-    font-size:40px;
+    /*font-size:40px;
     color:#fff;
     line-height:400px;
     text-align:center;
-    text-decoration:none;
+    text-decoration:none;*/
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    white-space: pre;
-    line-height: 0.9;
+    /*white-space: pre;
+    line-height: 0.9;*/
     top: 20%;
     left: 0;
     right: 0;
+    /*padding-top: 50%;*/
     background: radial-gradient(#33CCCC,#FFFFFF)}
     
 .menu:hover{
     box-shadow: 0px 0px 10px 10px #99CCFF; cursor:pointer;}
+
+#message_field {
+    top: 50%;
+    -moz-transform:translateY(-50%);
+    -ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+    transform: translateY(-50%);
+    font-size:40px;
+    position:relative;
+    color:#fff;
+    text-align:center;
+    line-height:70px;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 
 #header {
     background-color: #0066CC;
