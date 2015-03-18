@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
-    
   <head>
     <title>Self Care</title>
     <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <meta charset="UTF-8"> 
   </head>
+  
   <!--the big circle in middle -->
   <div class="menu" id="circle">
-      <div id="message_field"></div>
+    <div id="message_field"></div>
   </div>
 
   <!--Javascript for getting text in circle and changing colour-->
   <script type="text/javascript">
+    
     //initialise text in circle
     var mfield = document.getElementById("message_field");
     var text = ""
@@ -38,7 +39,6 @@
             text = data;
             mfield.innerHTML = text;
         });
-    //});
 
     // change circle colours each click
    // {
@@ -74,13 +74,13 @@
 		    :"radial-gradient(" + new_col[0] + "," + new_col[1] + ")"
 	    });
     });
-</script>
+  </script>
 
-<div id="header">
-        <div id="header-content">
-                    <h1 class=>Self Care</h1>
-                    <p class="alignleft">Click the circle for care ;o</p>
-                    <p class="alignright"><font size = 2><a href="http://mcla.ug">by Hannah McLaughlin</a></font> </p>
-        </div>
-</div>
+  <div id="header">
+    <div id="header-content">
+      <h1 class=>Self Care</h1>
+      <p class="alignleft">Click the circle for care ;o</p>
+      <p class="alignright"><font size = 2><a href="http://mcla.ug">by Hannah McLaughlin</a></font> </p>
+    </div>
+  </div>
 </html>
