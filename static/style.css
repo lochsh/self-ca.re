@@ -1,6 +1,9 @@
 body{
     font-family: AppleGothic, "Century Gothic", Muli, "Avant Garde", sans-serif;
-	background-image: url("background.jpg");
+	background-image: url("at_last.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 	background-colour: #66CCFF;}
 
 h1, h2 {
@@ -40,7 +43,7 @@ a:hover, a:visited, a:link, a:active{
     display:block;
     width:400px;
     height:400px;
-    border: 8px solid #FFFFFF;
+    /*border: 8px solid #FFFFFF;*/
     border-radius:50%;
     /*font-size:40px;
     color:#fff;
@@ -81,11 +84,11 @@ a:hover, a:visited, a:link, a:active{
 #header {
     background-color: #0066CC;
     /*Opacity start*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-    filter: alpha(opacity=50);
-    -moz-opacity: 0.50;
-    -khtml-opacity: 0.5;
-    opacity: 0.5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.70;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
     /*Opacity end*/
     color: white;
     position: fixed;
