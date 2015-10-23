@@ -59,10 +59,17 @@ a:hover, a:visited, a:link, a:active{
     left: 0;
     right: 0;
     /*padding-top: 50%;*/
-    background: radial-gradient(#33CCCC,#FFFFFF)}
+    background: radial-gradient(#33CCCC,#FFFFFF);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;}
     
 .menu:hover{
-    box-shadow: 0px 0px 10px 10px #99CCFF; cursor:pointer;}
+     -webkit-transform: scale(1.1,1.1);
+     -moz-transform:scale(1.1,1.1);
+     cursor:pointer;
+ }
 
 #message_field {
     top: 50%;
