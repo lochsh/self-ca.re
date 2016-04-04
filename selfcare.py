@@ -10,12 +10,9 @@ def count_lines(file_name):
 
 
 def read_lines(file_name):
-    """Read file line by line into list, return list"""
-    words = []
+    """Return list where each entry is a line from file"""
     with open(file_name) as f:
-        for line in f:
-            words.append(line.rstrip())
-    return words
+        return f.read().splitlines()
 
 
 def selfcare():
