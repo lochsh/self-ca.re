@@ -1,4 +1,4 @@
-import random as rnd
+import random
 
 
 def count_lines(file_name):
@@ -28,15 +28,12 @@ def selfcare():
 
     'You are a <adjective> <noun>'
     """
-    # Count how many adjectives and nouns
     num_adj = count_lines('adjectives.txt')
     num_noun = count_lines('nouns.txt')
 
-    # Randomly pick one adjective and one noun
-    ind_adj = rnd.randint(0, num_adj - 1)
-    ind_noun = rnd.randint(0, num_noun - 1)
+    ind_adj = random.randint(0, num_adj - 1)
+    ind_noun = random.randint(0, num_noun - 1)
 
-    # Read adjectives and nouns
     adj = read_lines('adjectives.txt')
     nouns = read_lines('nouns.txt')
     return 'You are a%s %s' % (adj[ind_adj], nouns[ind_noun])
