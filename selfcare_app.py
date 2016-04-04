@@ -4,7 +4,7 @@ from selfcare import selfcare
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/selfcare')
 def sc():
     return selfcare()
 
