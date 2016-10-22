@@ -24,7 +24,7 @@ def selfcare():
 
 
 def main():
-    print selfcare()
+    print(selfcare())
 
 if __name__ == "__main__":
     main()
